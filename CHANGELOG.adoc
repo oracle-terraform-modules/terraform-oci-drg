@@ -1,0 +1,22 @@
+= CHANGELOG
+:idprefix:
+:idseparator: *
+
+:uri-changelog: http://keepachangelog.com/
+:uri-semver: https://semver.org/
+All notable changes to this project are documented in this file.
+
+The format is based on {uri-changelog}[Keep a Changelog] and the versioning follows the {uri-semver}[Semantic Versioning 2.0.0] specification.
+
+Given a version number MAJOR.MINOR.PATCH:
+
+- MAJOR version when making incompatible API changes,
+- MINOR version when adding functionality in a backwards compatible manner,
+- PATCH version when making backwards compatible bug fixes.
+
+
+== v1.0.0 (not released)
+
+=== Changes
+* First release after split from terraform-oci-vcn
+

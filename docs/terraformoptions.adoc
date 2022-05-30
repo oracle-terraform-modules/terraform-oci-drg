@@ -1,0 +1,123 @@
+= Terraform Options
+:idprefix:
+:idseparator: -
+:sectlinks:
+:sectnums:
+:toc:
+:uri-repo: https://github.com/oracle-terraform-modules/terraform-oci-vcn
+
+:uri-rel-file-base: link:{uri-repo}/blob/main
+:uri-rel-tree-base: link:{uri-repo}/tree/main
+
+:uri-docs: {uri-rel-file-base}/docs
+:uri-oci-region: https://docs.cloud.oracle.com/iaas/Content/General/Concepts/regions.htm
+:uri-terraform-cidrsubnet: https://www.terraform.io/docs/configuration/functions/cidrsubnet.html
+
+== Provider
+
+[stripes=odd,cols="2m,5,1m,1m", options=header,width="100%"]
+|===
+|Parameter
+|Description
+|Type
+|Default
+
+|`region`
+|Region where to provision the vcn. {uri-oci-region}[List of regions]. *Optional*.
+|
+|
+
+|===
+
+== General OCI
+
+[stripes=odd,cols="1m,4,3a,2m", options=header,width="100%"]
+|===
+|Parameter
+|Description
+|Type
+|Default
+
+|`compartment_id`
+|Compartment id where the VCN Cluster will be provisioned. *Required*.
+|`string`
+|
+
+|`label_prefix`
+|a string to be prepended to the name of resources. *Required*.
+|`string`
+|"none"
+
+|`freeform_tags`
+|simple key-value pairs to tag the resources created specified in the form of a map
+|`map(any)`
+
+e.g.
+[source,HCL]
+----
+freeform_tags = {
+  department = "finance"
+  environment = "dev"
+}
+----
+|freeform_tags = {
+  environment = "dev"
+}
+
+|`defined_tags`
+|predefined and scoped to a namespace to tag the resources created using defined tags.
+|`map(string)`
+
+e.g.
+[source,HCL]
+----
+defined_tags = {
+  "Operations.CostCenter" = "42"
+}
+----
+|null
+
+|===
+
+== DRG
+
+[stripes=odd,cols="2m,8,1a,2m", options=header,width="100%"]
+|===
+|Parameter
+|Description
+|Type
+|Default
+
+|`drg_display_name`
+|(Updatable) Name of Dynamic Routing Gateway. Does not have to be unique.
+|`string`
+|drg
+
+|`drg_vcn_attachments`
+|The OCID of the network resource attached to the DRG
+|`string`
+|null
+
+|`create_rpc`
+|Whether to create Remote Peering Connection. If set to true, creates an RPC
+|`boolean`
+|false
+
+|`create_service_gateway`
+|Whether to create a service gateway to use Oracle Services.
+|`boolean`
+|false
+
+|`rpc_acceptor_id`
+|the ID of the remote RPC"
+|`string`
+|null
+
+|`rpc_acceptor_region`
+|The OCI region where the Remote Peering Connection will be established with.
+|`string`
+|null
+
+
+
+|===
