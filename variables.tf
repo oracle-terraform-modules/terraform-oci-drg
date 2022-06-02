@@ -58,6 +58,7 @@ variable "drg_vcn_attachments" {
   default     = null
 }
 
+# rpc parameters
 variable "create_rpc" {
   description = "Whether to create Remote Peering Connection. If set to true, creates an RPC"
   type        = bool

@@ -23,7 +23,7 @@ In the remote region will be created:
 
 This diagram illustrates what will be created by this example.
 
-![diagram](../../..//docs/images/network_remote_peering_basic.png))
+![diagram](../../docs/images/network_remote_peering_basic.png)
 
 ## Prerequisites
 

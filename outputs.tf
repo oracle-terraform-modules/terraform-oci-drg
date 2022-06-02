@@ -15,7 +15,7 @@ output "drg_display_name" {
 
 
 # Complete outputs for each resources with provider parity. Auto-updating.
-# Usefull for module composition.
+# Useful for module composition.
 
 output "drg_all_attributes" {
   description = "all attributes of created drg"

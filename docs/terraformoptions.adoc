@@ -95,16 +95,18 @@ defined_tags = {
 
 |`drg_vcn_attachments`
 |The OCID of the network resource attached to the DRG
-|`string`
+|
+{
+   "myvcn": {
+     vcn_id : ""
+     vcn_transit_routing_rt_id : ""
+     drg_route_table_id : ""
+   }
+}
 |null
 
 |`create_rpc`
 |Whether to create Remote Peering Connection. If set to true, creates an RPC
-|`boolean`
-|false
-
-|`create_service_gateway`
-|Whether to create a service gateway to use Oracle Services.
 |`boolean`
 |false
 

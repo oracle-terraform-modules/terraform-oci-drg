@@ -8,27 +8,39 @@ region = "us-phoenix-1"
 # general oci parameters
 
 compartment_id = ""
+label_prefix   = "none"
 
-label_prefix = "none"
+freeform_tags = {}
+defined_tags  = {}
+
+# freeform_tags = {
+#   environment = "dev"
+# }
+# 
+# defined_tags = {
+#   "Operations.CostCenter" = "42"
+# }
+
 
 # drg parameters
-drg_display_name = drg
+drg_display_name = "drg"
 
 # vcns to be attached
 drg_vcn_attachments = null
 
+# drg_vcn_attachments = {
+#   "myvcn": {
+#     vcn_id : ""
+#     vcn_transit_routing_rt_id : ""
+#     drg_route_table_id : ""
+#   }
+# }
+
+
 # rpc parameters
+
 create_rpc = false
 rpc_acceptor_id = null
 rpc_acceptor_region = null
-
-
-freeform_tags = {
-  environment = "dev"
-}
-
-defined_tags = {
-  "Operations.CostCenter" = "42"
-}
 
 

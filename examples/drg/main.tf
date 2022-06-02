@@ -4,8 +4,8 @@
 # Resources
 
 module "drg_hub" {
-  source = "github.com/oracle-terraform-modules/terraform-oci-drg"
-  
+  # source = "github.com/oracle-terraform-modules/terraform-oci-drg"
+  source = "../../"
   # to use the terraform registry version comment the previous line and uncomment the 2 lines below
   # source  = "oracle-terraform-modules/drg"
   # version = "specify_version_number"

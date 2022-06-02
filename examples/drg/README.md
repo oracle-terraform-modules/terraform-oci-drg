@@ -5,8 +5,9 @@
 
 This example illustrates how to use `terraform-oci-drg` module to create a DRG. 
 
+This diagram illustrates what will be created by this example.
 
-<!-- update provisioning info -->
+![diagram](../../docs/images/network_drg_basic.png)
 
 ## Prerequisites
 
