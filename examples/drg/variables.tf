@@ -1,4 +1,4 @@
-# Copyright (c) 2019, 2021, Oracle Corporation and/or affiliates.
+# Copyright (c) 2022 Oracle Corporation and/or affiliates.
 # Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl
 
 # provider identity parameters
@@ -63,9 +63,9 @@ variable "vcn_spokes" {
     vcn_spoke1 = {
       cidrs                    = ["10.0.1.0/24", "10.0.2.0/24"]
       dns_label                = "spoke1"
-      create_internet_gateway  = true
+      create_internet_gateway  = false
       create_nat_gateway       = true
-      create_service_gateway   = true
+      create_service_gateway   = false
       enable_ipv6              = true
       lockdown_default_seclist = true
     }
@@ -74,7 +74,7 @@ variable "vcn_spokes" {
       dns_label                = "spoke2"
       create_internet_gateway  = true
       create_nat_gateway       = false
-      create_service_gateway   = true
+      create_service_gateway   = false
       enable_ipv6              = false
       lockdown_default_seclist = true
     }
