@@ -1,0 +1,119 @@
+= Quickstart
+:idprefix:
+:idseparator: -
+:sectlinks:
+:toc:
+
+:uri-repo: https://github.com/oracle-terraform-modules/terraform-oci-drg
+:uri-rel-file-base: link:{uri-repo}/blob/main
+:uri-rel-tree-base: link:{uri-repo}/tree/main
+:uri-docs: {uri-rel-file-base}/docs
+:uri-oci-keys: https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm
+:uri-oci-ocids: https://docs.cloud.oracle.com/iaas/Content/API/Concepts/apisigningkey.htm#five
+:uri-terraform: https://www.terraform.io
+:uri-terraform-oci: https://www.terraform.io/docs/providers/oci/index.html
+:uri-terraform-options: {uri-docs}/terraformoptions.adoc
+:uri-variables: {uri-rel-file-base}/variables.tf
+
+
+== Assumptions
+
+1. You have setup the {uri-oci-keys}[required keys]
+2. You know the {uri-oci-ocids}[required OCIDs]
+3. You have the necessary permissions
+
+== Pre-requisites
+
+1. Git is installed
+2. SSH client is installed
+3. Terraform 1.0.0 or greater is installed
+
+== Instructions
+
+=== Provisioning using this git repo
+
+. Clone the repo:
+
++
+[source,bash]
+----
+git clone https://github.com/oracle-terraform-modules/terraform-oci-drg.git tfdrg
+
+cd tfdrg
+
+cp terraform.tfvars.example terraform.tfvars
+----
+
+. Create a provider.tf file and add the following:
+
++
+[source,hcl]
+----
+provider "oci" {
+  fingerprint          = var.api_fingerprint
+  private_key_path     = var.api_private_key_path
+  region               = var.region
+  tenancy_ocid         = var.tenancy_id
+  user_ocid            = var.user_id
+}
+
+# provider identity parameters
+variable "api_fingerprint" {
+  description = "fingerprint of oci api private key"
+  type        = string
+}
+
+variable "api_private_key_path" {
+  description = "path to oci api private key used"
+  type        = string
+}
+
+variable "tenancy_id" {
+  description = "tenancy id where to create the sources"
+  type        = string
+}
+
+variable "user_id" {
+  description = "id of user that terraform will use to create the resources"
+  type        = string
+}
+----
+
+. Set mandatory provider parameters in terraform.tfvars:
+
+* `api_fingerprint`
+* `api_private_key_path`
+* `region`
+* `tenancy_id`
+* `user_id`
+
+. Override other parameters in terraform.tfvars:
+
+* `compartment_id`
+* `label_prefix`
+* `drg_display_name`
+
+. Optional parameters to override:
+
+* `drg_vcn_attachments`
+* `create_rpc`
+* `rpc_acceptor_id`
+* `rpc_acceptor_region`
+* `freeform_tags`
+* `defined_tags`
+
+
+. Run Terraform:
+
++
+[source,bash]
+----
+terraform init
+terraform plan
+terraform apply
+----
+
+
+== Related documentation:
+
+* {uri-terraform-options}[All Terraform configuration options] for {uri-repo}[this project]
