@@ -3,23 +3,19 @@
 
 output "drg_id" {
   description = "id of drg if it is created"
-  value       = join(",", oci_core_drg.drg[*].id)
+  value       = join(",", length(data.oci_core_drgs.drg_data.drgs) == 0 ? oci_core_drg.drg[*].id : data.oci_core_drgs.drg_data.drgs[*].id)
 }
-
-
 
 output "drg_display_name" {
   description = "display name of drg if it is created"
-  value       = join(",", oci_core_drg.drg[*].display_name)
+  value       = join(",", length(data.oci_core_drgs.drg_data.drgs) == 0 ? oci_core_drg.drg[*].display_name : data.oci_core_drgs.drg_data.drgs[*].display_name)
 }
-
 
 # Complete outputs for each resources with provider parity. Auto-updating.
 # Useful for module composition.
-
 output "drg_all_attributes" {
   description = "all attributes of created drg"
-  value       = { for k, v in oci_core_drg.drg : k => v }
+  value       = { for k, v in(length(data.oci_core_drgs.drg_data.drgs) == 0 ? oci_core_drg.drg[0] : data.oci_core_drgs.drg_data.drgs[0]) : k => v }
 }
 
 output "drg_attachment_all_attributes" {
@@ -30,8 +26,8 @@ output "drg_attachment_all_attributes" {
 output "drg_summary" {
   description = "drg information summary"
   value = {
-    (oci_core_drg.drg.display_name) = {
-      drg_id          = oci_core_drg.drg.id
+    (length(data.oci_core_drgs.drg_data.drgs) == 0 ? oci_core_drg.drg[0].display_name : data.oci_core_drgs.drg_data.drgs[0].display_name) = {
+      drg_id          = length(data.oci_core_drgs.drg_data.drgs) == 0 ? oci_core_drg.drg[0].id : data.oci_core_drgs.drg_data.drgs[*].id
       vcn_attachments = { for k, v in oci_core_drg_attachment.vcns : k => v.network_details[0].id }
 
     }
@@ -41,7 +37,6 @@ output "drg_summary" {
     }
   }
 }
-
 
 
 output "rpc_id" {

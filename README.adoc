@@ -36,6 +36,7 @@ It creates the following resources:
 * A DRG attached to one or more customizable VCNs 
 * An optional Remote Peering Connection (RPC)
 
+> This module can either create a new DRG or wrap around an existing one.
 
 This module is primarily meant to be reusable to create more advanced infrastructure on {uri-oci}[OCI] either manually in the OCI Console or by extending the Terraform code.
 
