@@ -24,6 +24,7 @@ defined_tags  = {}
 
 # drg parameters
 drg_display_name = "drg"
+drg_id = null
 
 # vcns to be attached
 drg_vcn_attachments = null

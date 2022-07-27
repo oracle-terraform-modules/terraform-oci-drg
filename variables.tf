@@ -1,17 +1,13 @@
 # Copyright (c) 2022 Oracle Corporation and/or affiliates.  All rights reserved.
 # Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl
 
-# provider identity parameters
+# general oci parameters
 
 variable "region" {
   # List of regions: https://docs.cloud.oracle.com/iaas/Content/General/Concepts/regions.htm#ServiceAvailabilityAcrossRegions
-  description = "the OCI region where resources will be created"
+  description = "The OCI region where OKE resources will be created."
   type        = string
-  default     = null
 }
-
-# general oci parameters
-
 variable "compartment_id" {
   description = "compartment id where to create all resources"
   type        = string
@@ -58,6 +54,12 @@ variable "drg_vcn_attachments" {
   default     = null
 }
 
+variable "drg_id" {
+  description = "ID of an external created DRG"
+  type        = string
+  default     = null
+}
+
 # rpc parameters
 variable "create_rpc" {
   description = "Whether to create Remote Peering Connection. If set to true, creates an RPC"
@@ -67,8 +69,8 @@ variable "create_rpc" {
 
 variable "rpc_acceptor_id" {
   description = "the ID of the remote RPC"
-  type = string
-  default = null
+  type        = string
+  default     = null
 }
 variable "rpc_acceptor_region" {
   # List of regions: https://docs.cloud.oracle.com/iaas/Content/General/Concepts/regions.htm#ServiceAvailabilityAcrossRegions
