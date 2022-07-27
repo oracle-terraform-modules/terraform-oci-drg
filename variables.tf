@@ -5,7 +5,7 @@
 
 variable "region" {
   # List of regions: https://docs.cloud.oracle.com/iaas/Content/General/Concepts/regions.htm#ServiceAvailabilityAcrossRegions
-  description = "The OCI region where OKE resources will be created."
+  description = "The OCI region where the DRG will be created."
   type        = string
 }
 variable "compartment_id" {
