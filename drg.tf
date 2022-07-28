@@ -17,7 +17,7 @@ data "oci_core_drgs" "drg_data" {
 
   filter {
     name   = "id"
-    values = [var.drg_id]
+    values = [var.drg_id == null ? "none" : var.drg_id]
   }
 
 }
