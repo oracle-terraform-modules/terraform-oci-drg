@@ -57,23 +57,12 @@ variable "drg_id" {
 }
 
 # rpc parameters
-variable "create_rpc" {
-  description = "Whether to create Remote Peering Connection. If set to true, creates an RPC"
-  type        = bool
-  default     = false
+variable "remote_peering_connections" {
+  description = "List of parameters to add and optionally peer remote peering connections"
+  type        = map(any)
+  default     = null
 }
 
-variable "rpc_acceptor_id" {
-  description = "the ID of the remote RPC"
-  type        = string
-  default     = null
-}
-variable "rpc_acceptor_region" {
-  # List of regions: https://docs.cloud.oracle.com/iaas/Content/General/Concepts/regions.htm#ServiceAvailabilityAcrossRegions
-  description = "the OCI region where the Remote Peering Connection will be established with"
-  type        = string
-  default     = null
-}
 
 
 

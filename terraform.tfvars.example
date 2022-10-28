@@ -35,9 +35,13 @@ drg_vcn_attachments = null
 
 
 # rpc parameters
+remote_peering_connections = null 
 
-create_rpc = false
-rpc_acceptor_id = null
-rpc_acceptor_region = null
-
+#remote_peering_connections = {
+#    "rpc1" : {}
+#    "rpc2" : {
+#        "rpc_acceptor_id" : "ocid1.remotepeeringconnection.oc1.aaaaaa" # <-- edit this OCID
+#        "rpc_acceptor_region" : "us-ashburn-1" <-- replace the region
+#    }
+#}
 
