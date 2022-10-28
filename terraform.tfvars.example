@@ -1,10 +1,6 @@
 # Copyright (c) 2022 Oracle Corporation and/or affiliates.  All rights reserved.
 # Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl
 
-# Region
-
-region = "us-phoenix-1"
-
 # general oci parameters
 
 compartment_id = ""
@@ -24,6 +20,7 @@ defined_tags  = {}
 
 # drg parameters
 drg_display_name = "drg"
+drg_id = null
 
 # vcns to be attached
 drg_vcn_attachments = null

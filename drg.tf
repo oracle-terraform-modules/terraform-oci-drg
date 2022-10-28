@@ -1,12 +1,25 @@
 # Copyright (c) 2022 Oracle Corporation and/or affiliates.  All rights reserved.
 # Licensed under the Universal Permissive License v 1.0 as shown at https://oss.oracle.com/licenses/upl
 
+
 resource "oci_core_drg" "drg" {
   compartment_id = var.compartment_id
   display_name   = var.label_prefix == "none" ? var.drg_display_name : "${var.label_prefix}-${var.drg_display_name}"
 
   freeform_tags = var.freeform_tags
   defined_tags  = var.defined_tags
+
+  count = var.drg_id == null ? 1 : 0
+}
+
+data "oci_core_drgs" "drg_data" {
+  compartment_id = var.compartment_id
+
+  filter {
+    name   = "id"
+    values = [var.drg_id == null ? "none" : var.drg_id]
+  }
+
 }
 
 resource "oci_core_drg_attachment" "vcns" {
@@ -16,7 +29,7 @@ resource "oci_core_drg_attachment" "vcns" {
   freeform_tags = var.freeform_tags
   defined_tags  = var.defined_tags
 
-  drg_id = oci_core_drg.drg.id
+  drg_id = var.drg_id == null ? oci_core_drg.drg[0].id : var.drg_id
 
   network_details {
     id             = each.value.vcn_id                                                                          # required
@@ -32,9 +45,9 @@ resource "oci_core_drg_attachment" "vcns" {
 }
 
 resource "oci_core_remote_peering_connection" "rpc" {
-  
+
   compartment_id = var.compartment_id
-  drg_id         = oci_core_drg.drg.id
+  drg_id         = var.drg_id == null ? oci_core_drg.drg[0].id : var.drg_id
   display_name   = var.label_prefix == "none" ? "rpc_created_from_${var.drg_display_name}" : "${var.label_prefix}_rpc"
 
   freeform_tags = var.freeform_tags
