@@ -45,8 +45,8 @@ If you are not running the latest version of Terraform or the provider, please u
 <!--- Information about code formatting: https://help.github.com/articles/basic-writing-and-formatting-syntax/#quoting-code --->
 
 ```hcl
-# Copy-paste your Terraform configurations here - for large Terraform configs,
-# please use a service like Dropbox and share a link to the ZIP file.
+# Copy-paste your Terraform configurations here. For large Terraform configs,
+# please use a service like Dropbox and share a link to an archive file (tar.gz or zip).
 # Please remove any sensitive information from configuration files before sharing them.
 ```
 
