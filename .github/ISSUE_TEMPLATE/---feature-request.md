@@ -21,7 +21,7 @@ assignees: ''
 
 <!--- Please leave a helpful description of the feature request here. --->
 
-### New or Affected Resource(s)
+### New or existing resource(s)
 
 <!--- Please list any new or affected resources and data sources that are part of the request. For example: "oci_core_vcn" --->
 
