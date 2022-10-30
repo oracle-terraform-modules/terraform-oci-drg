@@ -40,7 +40,7 @@ If you are not running the latest version of Terraform or the provider, please u
 <!--- Please list the affected resources and data sources. For example, "oci_core_vcn". --->
 
 
-### Terraform Configuration Files
+### Terraform configuration files
 
 <!--- Information about code formatting: https://help.github.com/articles/basic-writing-and-formatting-syntax/#quoting-code --->
 
