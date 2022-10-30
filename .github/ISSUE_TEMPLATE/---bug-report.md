@@ -29,7 +29,7 @@ If you are running into one of these scenarios, we recommend opening an issue in
 
 <!--- Thank you for keeping this note for the community --->
 
-### Terraform Version and Provider Version
+### Terraform and Oracle Cloud Infrastructure provider versions
 
 <!--- Please run `terraform -v` to show the Terraform core version and provider version(s).
 If you are using a local copy of the Terraform Oracle Cloud Infrastructure Provider, run the plugin directly to get the version: `<path-to-plugin>/terraform-provider-oci`
