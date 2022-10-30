@@ -32,7 +32,7 @@ If you are running into one of these scenarios, we recommend opening an issue in
 ### Terraform and Oracle Cloud Infrastructure provider versions
 
 <!--- Please run `terraform -v` to show the Terraform core version and provider version(s).
-If you are using a local copy of the Terraform Oracle Cloud Infrastructure Provider, run the plugin directly to get the version: `<path-to-plugin>/terraform-provider-oci`
+If you are using a local copy of the Oracle Cloud Infrastructure (OCI) provider for Terraform, run the plugin directly to get the version: `<path-to-plugin>/terraform-provider-oci`
 If you are not running the latest version of Terraform or the provider, please upgrade because your issue may have already been fixed. [Terraform documentation on provider versioning](https://www.terraform.io/docs/configuration/providers.html#provider-versions). --->
 
 ### Affected Resource(s)
