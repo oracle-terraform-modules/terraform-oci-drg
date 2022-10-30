@@ -60,7 +60,7 @@ To obtain the debug output, see the [verbose logging for OCI Terraform Provider 
 Github Gist: https://gist.github.com/
 --->
 
-### Panic Output
+### Panic output
 
 <!---
 If Terraform produced a panic, please provide a link to a GitHub Gist containing the output of the `crash.log`.
