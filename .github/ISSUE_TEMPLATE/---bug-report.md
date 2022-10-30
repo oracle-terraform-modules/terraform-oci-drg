@@ -21,7 +21,7 @@ If you are running into one of these scenarios, we recommend opening an issue in
 
 <!--- Please keep this note for the community --->
 
-### Community Note
+### Community note
 
 * Please vote on this issue by adding a 👍 [reaction](https://blog.github.com/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) to the original issue to help the community and maintainers prioritize this request
 * Please do not leave "+1" or "me too" comments, they generate extra noise for issue followers and do not help prioritize the request
