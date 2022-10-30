@@ -31,7 +31,7 @@ assignees: ''
 <!--- Information about code formatting: https://help.github.com/articles/basic-writing-and-formatting-syntax/#quoting-code --->
 
 ```hcl
-# Copy-paste any Terraform configurations for how the requested feature may be used.
+# Provide example Terraform configurations for how the requested feature may be used.
 ```
 
 ### References
