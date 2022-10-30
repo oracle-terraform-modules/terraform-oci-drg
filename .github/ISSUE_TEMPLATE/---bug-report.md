@@ -50,7 +50,7 @@ If you are not running the latest version of Terraform or the provider, please u
 # Please remove any sensitive information from configuration files before sharing them.
 ```
 
-### Debug Output
+### Debug output
 
 <!---
 Please provide a link to a GitHub Gist containing the complete debug output. Please do NOT paste the debug output in the issue; just paste a link to the Gist.
