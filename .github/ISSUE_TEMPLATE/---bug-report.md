@@ -10,7 +10,7 @@ assignees: ''
 <!---
 Please note the following potential times when an issue might be in Terraform core:
 
-* [Configuration Language](https://www.terraform.io/docs/configuration/index.html) or resource ordering issues
+* [Configuration language](https://www.terraform.io/docs/configuration/index.html) or resource ordering issues
 * [State](https://www.terraform.io/docs/state/index.html) and [State Backend](https://www.terraform.io/docs/backends/index.html) issues
 * [Provisioner](https://www.terraform.io/docs/provisioners/index.html) issues
 * [Registry](https://registry.terraform.io/) issues
