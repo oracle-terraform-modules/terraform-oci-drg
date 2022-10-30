@@ -76,7 +76,7 @@ Github Gist: https://gist.github.com/
 
 <!--- What actually happened? --->
 
-### Steps to Reproduce
+### Steps to reproduce
 
 <!--- Please list the steps required to reproduce the issue. --->
 
