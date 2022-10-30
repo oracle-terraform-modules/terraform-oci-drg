@@ -26,7 +26,7 @@ assignees: ''
 <!--- Please list any new or existing affected resources and data sources that are part of the request. For example: "oci_core_vcn" --->
 
 
-### Potential Terraform Configuration
+### Example Terraform configuration
 
 <!--- Information about code formatting: https://help.github.com/articles/basic-writing-and-formatting-syntax/#quoting-code --->
 
