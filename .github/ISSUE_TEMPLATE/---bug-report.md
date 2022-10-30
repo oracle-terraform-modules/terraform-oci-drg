@@ -72,7 +72,7 @@ Github Gist: https://gist.github.com/
 
 <!--- What should have happened? --->
 
-### Actual Behavior
+### Actual behavior
 
 <!--- What actually happened? --->
 
