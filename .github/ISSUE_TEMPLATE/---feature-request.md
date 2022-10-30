@@ -23,7 +23,7 @@ assignees: ''
 
 ### New or existing resource(s)
 
-<!--- Please list any new or affected resources and data sources that are part of the request. For example: "oci_core_vcn" --->
+<!--- Please list any new or existing affected resources and data sources that are part of the request. For example: "oci_core_vcn" --->
 
 
 ### Potential Terraform Configuration
