@@ -55,7 +55,7 @@ If you are not running the latest version of Terraform or the provider, please u
 <!---
 Please provide a link to a GitHub Gist containing the complete debug output. Please do NOT paste the debug output in the issue; just paste a link to the Gist.
 
-To obtain the debug output, see the [Verbose logging for OCI Terraform Provider](https://www.terraform.io/docs/providers/oci/guides/troubleshooting.html#verbose-logging-for-oci-terraform-provider).
+To obtain the debug output, see the [verbose logging for OCI Terraform Provider documentation].(https://www.terraform.io/docs/providers/oci/guides/troubleshooting.html#verbose-logging-for-oci-terraform-provider).
 
 Github Gist: https://gist.github.com/
 --->
