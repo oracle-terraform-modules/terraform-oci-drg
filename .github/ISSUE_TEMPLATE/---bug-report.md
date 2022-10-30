@@ -82,7 +82,7 @@ Github Gist: https://gist.github.com/
 
 1. `terraform apply`
 
-### Important Factoids
+### Things we need to know
 
 <!--- Is there anything atypical about your environment that we should know? For example: Is the issue specific to a region? --->
 
