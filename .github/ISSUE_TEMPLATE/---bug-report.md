@@ -35,7 +35,7 @@ If you are running into one of these scenarios, we recommend opening an issue in
 If you are using a local copy of the Oracle Cloud Infrastructure (OCI) provider for Terraform, run the plugin directly to get the version: `<path-to-plugin>/terraform-provider-oci`
 If you are not running the latest version of Terraform or the provider, please upgrade because your issue may have already been fixed. [Terraform documentation on provider versioning](https://www.terraform.io/docs/configuration/providers.html#provider-versions). --->
 
-### Affected Resource(s)
+### Affected resource(s)
 
 <!--- Please list the affected resources and data sources. For example, "oci_core_vcn". --->
 
