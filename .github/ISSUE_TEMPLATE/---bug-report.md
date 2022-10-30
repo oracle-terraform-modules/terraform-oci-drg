@@ -68,7 +68,7 @@ If Terraform produced a panic, please provide a link to a GitHub Gist containing
 Github Gist: https://gist.github.com/
 --->
 
-### Expected Behavior
+### Expected behavior
 
 <!--- What should have happened? --->
 
