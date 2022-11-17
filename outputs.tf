@@ -31,28 +31,20 @@ output "drg_summary" {
       vcn_attachments = { for k, v in oci_core_drg_attachment.vcns : k => v.network_details[0].id }
 
     }
-    "rpc" = {
-      display_name = join(",", oci_core_remote_peering_connection.rpc[*].display_name)
-      rpc_id       = join(",", oci_core_remote_peering_connection.rpc[*].id)
-    }
   }
 }
 
-
-output "rpc_id" {
-  description = "id of RPC if it is created"
-  value       = join(",", oci_core_remote_peering_connection.rpc[*].id)
-}
-
-output "rpc_display_name" {
-  description = "display name of RPC if it is created"
-  value       = join(",", oci_core_remote_peering_connection.rpc[*].display_name)
+# RPCS
+output "rpc_ids" {
+  description = "IDs of created RPCs"
+  value = values(oci_core_remote_peering_connection.rpcs)[*].id
 }
 
 output "rpc_all_attributes" {
-  description = "all attributes of created RPC"
-  value       = { for k, v in oci_core_remote_peering_connection.rpc : k => v }
+  description = "all attributes of created RPCs"
+  value       = { for k, v in oci_core_remote_peering_connection.rpcs : k => v }
 }
+
 
 
 

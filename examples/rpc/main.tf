@@ -85,7 +85,7 @@ module "drg_acceptor" {
   drg_display_name = "drg-rpc-acceptor"
 
   # rpc parameters
-  create_rpc = true
+  remote_peering_connections = { "rpc_acceptor" = {} }
 
   providers = {
     oci = oci.acceptor
@@ -95,7 +95,7 @@ module "drg_acceptor" {
 
 module "vcn_requestor" {
   # this module use the generic vcn module and configure it to act as rpc requestor vcn
-  
+
   source = "github.com/oracle-terraform-modules/terraform-oci-vcn"
   # to use the terraform registry version comment the previous line and uncomment the 2 lines below
   # source  = "oracle-terraform-modules/vcn/oci"
@@ -167,9 +167,12 @@ module "drg_requestor" {
   drg_display_name = "drg-rpc-requestor"
 
   # rpc parameters
-  create_rpc          = true
-  rpc_acceptor_id     = module.drg_acceptor.rpc_id
-  rpc_acceptor_region = var.region_acceptor
+  remote_peering_connections = {
+    "rpc_requestor" = {
+      "rpc_acceptor_id"     = module.drg_acceptor.rpc_all_attributes["rpc_acceptor"].id,
+      "rpc_acceptor_region" = var.region_acceptor
+    }
+  }
 
   providers = {
     oci = oci.requestor
