@@ -48,7 +48,7 @@ resource "oci_core_remote_peering_connection" "rpcs" {
   for_each       = var.remote_peering_connections != null ? var.remote_peering_connections : {}
   compartment_id = var.compartment_id
   drg_id         = var.drg_id == null ? oci_core_drg.drg[0].id : var.drg_id
-  display_name   = var.label_prefix == "none" ? each.key : "${var.label_prefix}-${each.key}"
+  display_name   = each.key
 
   freeform_tags = var.freeform_tags
   defined_tags  = var.defined_tags
