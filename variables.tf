@@ -57,8 +57,11 @@ variable "drg_id" {
 }
 
 # rpc parameters
+# map of remote peering connections
+# - key-only items represent represent local acceptors with no info about the remote peer
+# - items containing key and values represent local requestor and must have the OCID and region of the remote acceptor
 variable "remote_peering_connections" {
-  description = "List of parameters to add and optionally peer remote peering connections"
+  description = "List of parameters to add and optionally peer to remote peering connections"
   type        = map(any)
   default     = null
 }

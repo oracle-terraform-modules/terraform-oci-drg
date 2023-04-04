@@ -85,7 +85,7 @@ module "drg_acceptor" {
   drg_display_name = "drg-rpc-acceptor"
 
   # rpc parameters
-  remote_peering_connections = { "rpc_acceptor" = {} }
+  remote_peering_connections = { "${var.rpc_name_acceptor}"  = {} }
 
   providers = {
     oci = oci.acceptor
@@ -168,8 +168,8 @@ module "drg_requestor" {
 
   # rpc parameters
   remote_peering_connections = {
-    "rpc_requestor" = {
-      "rpc_acceptor_id"     = module.drg_acceptor.rpc_all_attributes["rpc_acceptor"].id,
+   "${var.rpc_name_requestor}" = {
+      "rpc_acceptor_id"     = module.drg_acceptor.rpc_all_attributes["${var.rpc_name_acceptor}"].id,
       "rpc_acceptor_region" = var.region_acceptor
     }
   }

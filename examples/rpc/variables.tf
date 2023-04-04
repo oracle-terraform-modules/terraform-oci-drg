@@ -56,7 +56,11 @@ variable "defined_tags" {
 }
 
 # acceptor parameters
-
+variable "rpc_name_acceptor" {
+  description = "Name for RPC acceptor"
+  type = string
+  default     = "rpc_acceptor"
+}
 variable "region_acceptor" {
   description = "the oci region where RPC acceptor resources will be created"
   type        = string
@@ -71,6 +75,11 @@ variable "vcn_cidrs_acceptor" {
 }
 
 # requestor parameter
+variable "rpc_name_requestor" {
+  description = "Name for RPC requestor"
+  type = string
+  default     = "rpc_requestor"
+}
 
 variable "region_requestor" {
   description = "OCI region where RPC requstor resources will be created"
