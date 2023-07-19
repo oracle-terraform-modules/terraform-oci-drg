@@ -13,7 +13,7 @@ resource "oci_core_drg" "drg" {
 }
 
 data "oci_core_drgs" "drg_data" {
-  compartment_id = var.compartment_id
+  compartment_id = coalesce(var.drg_compartment_id, var.compartment_id)
 
   filter {
     name   = "id"
