@@ -10,6 +10,12 @@ variable "compartment_id" {
   # no default value, asking user to explicitly set this variable's value. see codingconventions.adoc
 }
 
+variable "drg_compartment_id" {
+  description = "compartment id where the DRG is located"
+  type        = string
+  default     = null
+}
+
 variable "label_prefix" {
   description = "a string that will be prepended to all resources"
   type        = string
